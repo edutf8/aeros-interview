@@ -1,0 +1,11 @@
+main: dev.edward.troll.TrollPlugin
+author: utf_8
+version: 1.0
+name: Troll
+
+commands:
+    troll:
+        description: Troll a player
+        usage: /<command> [player]
+        permission: troll.command
+        aliases: [t]

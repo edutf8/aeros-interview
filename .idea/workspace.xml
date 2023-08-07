@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="169c9dde-4dc0-4cc1-8dbb-aefbfca4dc68" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/TrollPlugin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/commands/TrollCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/inventory/PlayersInventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/inventory/TrollsInventory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/listeners/InventoryListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/PlayerTroll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/Troll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/TrollManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/ChatTroll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/ElderGuardianTroll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/EmptyInventoryTroll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/MultiplyTroll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/RespawnTroll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/SmiteTroll.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/util/ItemBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/trolls.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2Tcqb8zvh30td9f2WqYhrMepFio" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="169c9dde-4dc0-4cc1-8dbb-aefbfca4dc68" name="Changes" comment="" />
+      <created>1691352784796</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1691352784796</updated>
+      <workItem from="1691352785884" duration="629000" />
+      <workItem from="1691355924337" duration="14773000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
