@@ -26,13 +26,18 @@ public class SmiteTroll implements Troll, Listener {
     }
 
     @Override
+    public String getRawName() {
+        return "Smite";
+    }
+
+    @Override
     public String getPermission() {
         return "troll.trolls.smite";
     }
 
     @Override
-    public String getDescription() {
-        return ChatColor.AQUA + "Strike lightning on your target.";
+    public String[] getDescription() {
+        return new String[] {ChatColor.LIGHT_PURPLE + "Strike lightning on your target."};
     }
 
     @Override

@@ -5,28 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="169c9dde-4dc0-4cc1-8dbb-aefbfca4dc68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/TrollPlugin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/commands/TrollCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/inventory/PlayersInventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/inventory/TrollsInventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/listeners/InventoryListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/PlayerTroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/Troll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/TrollManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/ChatTroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/ElderGuardianTroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/EmptyInventoryTroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/MultiplyTroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/RespawnTroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/SmiteTroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/util/ItemBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/trolls.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/edward/troll/TrollPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/TrollPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/edward/troll/commands/TrollCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/commands/TrollCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/edward/troll/inventory/PlayersInventory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/edward/troll/listeners/InventoryListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/listeners/InventoryListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/Troll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/Troll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/TrollManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/TrollManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/ChatTroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/ChatTroll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/ElderGuardianTroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/ElderGuardianTroll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/EmptyInventoryTroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/EmptyInventoryTroll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/MultiplyTroll.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/RespawnTroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/RespawnTroll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/SmiteTroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/edward/troll/manager/trolls/SmiteTroll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/trolls.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +50,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/aeros-interview",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -75,6 +72,7 @@
       <updated>1691352784796</updated>
       <workItem from="1691352785884" duration="629000" />
       <workItem from="1691355924337" duration="14773000" />
+      <workItem from="1691408209613" duration="3294000" />
     </task>
     <servers />
   </component>

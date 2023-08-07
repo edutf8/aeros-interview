@@ -23,58 +23,57 @@ public class InventoryListener implements Listener {
 
     @EventHandler
     public void onPlayerClick(InventoryClickEvent inventoryClickEvent) {
-        if (!inventoryClickEvent.getInventory().getName().equals(ChatColor.GREEN + "Online Players")) return;
+        if (inventoryClickEvent.getInventory().getName().equals("Online Players")) {
 
-        if (inventoryClickEvent.getCurrentItem() == null) return;
+            if (inventoryClickEvent.getCurrentItem() == null) return;
 
-        if (!inventoryClickEvent.getCurrentItem().getItemMeta().hasDisplayName()) return;
+            if (!inventoryClickEvent.getCurrentItem().getItemMeta().hasDisplayName()) return;
 
-        String playerName = inventoryClickEvent.getCurrentItem().getItemMeta().getDisplayName();
-        Player target = Bukkit.getPlayer(playerName);
-        if (target == null) {
-            inventoryClickEvent.getWhoClicked().sendMessage(ChatColor.RED + "Player not found.");
+            String playerName = inventoryClickEvent.getCurrentItem().getItemMeta().getDisplayName();
+            Player target = Bukkit.getPlayer(playerName);
+            if (target == null) {
+                inventoryClickEvent.getWhoClicked().sendMessage(ChatColor.RED + "Player not found.");
+                inventoryClickEvent.getWhoClicked().closeInventory();
+                return;
+            }
+
+            trollManager.initiateTroll(inventoryClickEvent.getWhoClicked().getUniqueId(), target.getUniqueId());
             inventoryClickEvent.getWhoClicked().closeInventory();
-            return;
-        }
+            inventoryClickEvent.getWhoClicked().openInventory(trollsInventory.getTrollsInventory());
+        } else if (inventoryClickEvent.getInventory().getName().equals(ChatColor.AQUA + "Trolls")) {
+            if (inventoryClickEvent.getCurrentItem() == null) return;
 
-        trollManager.initiateTroll(inventoryClickEvent.getWhoClicked().getUniqueId(), target.getUniqueId());
-        inventoryClickEvent.getWhoClicked().openInventory(trollsInventory.getTrollsInventory());
-    }
+            if (!inventoryClickEvent.getCurrentItem().getItemMeta().hasDisplayName()) return;
 
-    @EventHandler
-    public void onTrollClick(InventoryClickEvent inventoryClickEvent) {
-        if (!inventoryClickEvent.getInventory().getName().equals(ChatColor.AQUA + "Trolls")) return;
+            inventoryClickEvent.setCancelled(true);
 
-        if (inventoryClickEvent.getCurrentItem() == null) return;
+            String trollName = inventoryClickEvent.getCurrentItem().getItemMeta().getDisplayName();
 
-        if (!inventoryClickEvent.getCurrentItem().getItemMeta().hasDisplayName()) return;
+            PlayerTroll playerTroll = trollManager.getPlayerTroll(inventoryClickEvent.getWhoClicked().getUniqueId());
+            if (playerTroll == null) {
+                inventoryClickEvent.getWhoClicked()
+                        .sendMessage(ChatColor.RED + "Error Occurred; You are not trolling anyone.");
+                inventoryClickEvent.getWhoClicked().closeInventory();
+                return;
+            }
 
-        String trollName = inventoryClickEvent.getCurrentItem().getItemMeta().getDisplayName();
+            Troll troll = trollManager.getTroll(trollName);
+            if (troll == null) {
+                inventoryClickEvent.getWhoClicked().sendMessage(ChatColor.RED + "Error Occurred; Troll not found.");
+                inventoryClickEvent.getWhoClicked().closeInventory();
+                return;
+            }
 
-        PlayerTroll playerTroll = trollManager.getPlayerTroll(inventoryClickEvent.getWhoClicked().getUniqueId());
-        if (playerTroll == null) {
-            inventoryClickEvent.getWhoClicked()
-                    .sendMessage(ChatColor.RED + "Error Occurred; You are not trolling anyone.");
+            playerTroll.setTroll(troll);
+            troll.execute(playerTroll);
+            trollManager.recordTroll(playerTroll);
+
             inventoryClickEvent.getWhoClicked().closeInventory();
-            return;
+
+            Player sender = (Player) inventoryClickEvent.getWhoClicked();
+            sender.sendMessage(ChatColor.GREEN + "You have successfully trolled "
+                    + Bukkit.getPlayer(playerTroll.getTarget()).getName() + " with " + troll.getName() + "!");
         }
-
-        Troll troll = trollManager.getTroll(trollName);
-        if (troll == null) {
-            inventoryClickEvent.getWhoClicked().sendMessage(ChatColor.RED + "Error Occurred; Troll not found.");
-            inventoryClickEvent.getWhoClicked().closeInventory();
-            return;
-        }
-
-        playerTroll.setTroll(troll);
-        troll.execute(playerTroll);
-        trollManager.recordTroll(playerTroll);
-
-        inventoryClickEvent.getWhoClicked().closeInventory();
-
-        Player sender = (Player) inventoryClickEvent.getWhoClicked();
-        sender.sendMessage(ChatColor.GREEN + "You have successfully trolled "
-                + Bukkit.getPlayer(playerTroll.getTarget()).getName() + " with " + troll.getName() + "!");
     }
 
 }

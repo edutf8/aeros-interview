@@ -3,6 +3,8 @@ package dev.edward.troll.manager.trolls;
 import dev.edward.troll.manager.PlayerTroll;
 import dev.edward.troll.manager.Troll;
 import dev.edward.troll.util.ItemBuilder;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -11,9 +13,12 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.UUID;
 
 public class ChatTroll implements Troll, Listener {
+
+    private final Random random = new Random();
 
     private final String[] predefinedChat = new String[] {
             "When you use the parabola of the paella you find that GitHub is better than GitLab",
@@ -32,6 +37,11 @@ public class ChatTroll implements Troll, Listener {
 
     @Override
     public String getName() {
+        return ChatColor.GOLD + "Chat Control";
+    }
+
+    @Override
+    public String getRawName() {
         return "Chat Control";
     }
 
@@ -41,8 +51,10 @@ public class ChatTroll implements Troll, Listener {
     }
 
     @Override
-    public String getDescription() {
-        return "Change your targets chat into predefined chat.\nAuto expires after 30 seconds.";
+    public String[] getDescription() {
+        return new String[] {ChatColor.LIGHT_PURPLE + "Change your targets chat into predefined chat.",
+                ChatColor.LIGHT_PURPLE + "Auto expires after 30 seconds."
+        };
     }
 
     @Override
@@ -61,7 +73,7 @@ public class ChatTroll implements Troll, Listener {
         }
 
         asyncPlayerChatEvent.setCancelled(true);
-        asyncPlayerChatEvent.getPlayer().chat(predefinedChat[(int) (Math.random() * predefinedChat.length)]);
+        Bukkit.broadcastMessage("<" + asyncPlayerChatEvent.getPlayer().getName() + "> " + predefinedChat[random.nextInt(predefinedChat.length)]);
     }
 
     @Override

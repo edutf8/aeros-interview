@@ -6,9 +6,11 @@ public interface Troll {
 
     String getName();
 
+    String getRawName();
+
     String getPermission();
 
-    String getDescription();
+    String[] getDescription();
 
     void execute(PlayerTroll playerTroll);
 

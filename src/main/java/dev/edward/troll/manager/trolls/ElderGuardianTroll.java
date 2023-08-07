@@ -6,6 +6,7 @@ import dev.edward.troll.util.ItemBuilder;
 import net.minecraft.server.v1_8_R3.PacketPlayOutGameStateChange;
 import net.minecraft.server.v1_8_R3.PlayerConnection;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
@@ -15,6 +16,11 @@ public class ElderGuardianTroll implements Troll {
 
     @Override
     public String getName() {
+        return ChatColor.GOLD + "Elder Guardian";
+    }
+
+    @Override
+    public String getRawName() {
         return "Elder Guardian";
     }
 
@@ -24,8 +30,8 @@ public class ElderGuardianTroll implements Troll {
     }
 
     @Override
-    public String getDescription() {
-        return "Show the player the guardian effect on their screen.";
+    public String[] getDescription() {
+        return new String[] {ChatColor.LIGHT_PURPLE + "Show the player the guardian effect on their screen."};
     }
 
     @Override

@@ -6,6 +6,7 @@ import dev.edward.troll.util.ItemBuilder;
 import net.minecraft.server.v1_8_R3.PacketPlayOutEntityStatus;
 import net.minecraft.server.v1_8_R3.PlayerConnection;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
@@ -15,6 +16,11 @@ public class RespawnTroll implements Troll {
 
     @Override
     public String getName() {
+        return ChatColor.GOLD + "Infinite Respawn";
+    }
+
+    @Override
+    public String getRawName() {
         return "Infinite Respawn";
     }
 
@@ -24,8 +30,8 @@ public class RespawnTroll implements Troll {
     }
 
     @Override
-    public String getDescription() {
-        return "Show the player the respawn screen infinitely.";
+    public String[] getDescription() {
+        return new String[] {ChatColor.LIGHT_PURPLE + "Show the player the respawn screen infinitely."};
     }
 
     @Override

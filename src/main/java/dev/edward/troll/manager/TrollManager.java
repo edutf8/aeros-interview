@@ -34,10 +34,6 @@ public class TrollManager {
         trollMap.put(emptyInventoryTroll.getName(), emptyInventoryTroll);
         registerEvents(emptyInventoryTroll);
 
-        MultiplyTroll multiplyTroll = new MultiplyTroll();
-        trollMap.put(multiplyTroll.getName(), multiplyTroll);
-        registerEvents(multiplyTroll);
-
         RespawnTroll respawnTroll = new RespawnTroll();
         trollMap.put(respawnTroll.getName(), respawnTroll);
 
@@ -74,17 +70,15 @@ public class TrollManager {
     }
 
     public void recordTroll(PlayerTroll playerTroll) {
-        FileConfiguration fileConfiguration = trollPlugin.getFileConfiguration();
+        FileConfiguration fileConfiguration = trollPlugin.getConfig();
 
-        fileConfiguration.set("trolls." + playerTroll.getTroller().toString() + ".target", playerTroll.getTarget().toString());
-        fileConfiguration.set("trolls." + playerTroll.getTroller().toString() + ".target.troll", playerTroll.getTroll().getName());
-        fileConfiguration.set("trolls." + playerTroll.getTroller().toString() + ".target.time", System.currentTimeMillis());
+        UUID trollUUID = UUID.randomUUID();
+        fileConfiguration.set("trolls." + trollUUID + ".troller", playerTroll.getTroller().toString());
+        fileConfiguration.set("trolls." + trollUUID + ".target", playerTroll.getTarget().toString());
+        fileConfiguration.set("trolls." + trollUUID + ".troll", playerTroll.getTroll().getRawName());
+        fileConfiguration.set("trolls." + trollUUID + ".time", System.currentTimeMillis());
 
-        try {
-            fileConfiguration.save(trollPlugin.getFile());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        trollPlugin.saveConfig();
 
     }
 
